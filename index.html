@@ -23,6 +23,14 @@
                                         <!-- FAV ICON -->
                 <!--========================================================== -->
     <link rel="shortcut icon" href="https://img.freepik.com/iconos-gratis/planta_318-449427.jpg?w=2000" type="image/x-icon">
+                <!--========================================================== -->
+                                        <!-- CSS -->
+                <!--========================================================== -->   
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="bg-dark">
@@ -96,7 +104,13 @@
                 <!--========================================================== -->
                                         <!-- CAROUSEL -->
                 <!--========================================================== -->
-                <div id="carouselExample" class="carousel slide">
+            
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <img src="imag/planta1.jpg" class="d-block w-100" alt="...">
@@ -108,19 +122,41 @@
                         <img src="imag/planta3.jpg" class="d-block w-100" alt="...">
                       </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
-    <div>
-        <h1>hola mundo!</h1>
-    </div>
 
+
+
+                        <div class="container text-center my-3" id="RS">
+                          <div class="row align-items-start">
+                            <div class="col text-light">
+                                Siguenos en Facebook
+                                <br>
+                                GardenShop&nbsp&nbsp&nbsp
+                                <img src="imag/facebookk.png">
+                              </div>
+                            <div class="col text-light">
+                              Siguenos en Instagram
+                              <br>
+                              @Gardenshop&nbsp&nbsp&nbsp
+                              <img src="imag/Instagram.png">
+                            </div>
+                            <div class="col text-light ">
+                              Siguenos en TikTok
+                              <br>
+                              &nbsp&nbsp&nbsp&nbsp@Garden.shop&nbsp&nbsp&nbsp
+                              <img src="imag/TikTok.png">
+                            </div>
+                        </div>
+                      
+                
 </body>
 
 </html>
