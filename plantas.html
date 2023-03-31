@@ -2,34 +2,48 @@
 <html>
 
 <head>
-    <title>GardenShop | Plantas</title>
+    <title>GardenShop | Nosotros</title>
 
-                    <!--========================================================== -->
-                                    <!-- BOOSTRAP -->
-                    <!--========================================================== -->
+    <!--========================================================== -->
+    <!-- BOOSTRAP -->
+    <!--========================================================== -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
-                    <!--========================================================== -->
-                                    <!-- JAVASCRIPT -->
-                    <!--========================================================== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!--========================================================== -->
+    <!-- JAVASCRIPT -->
+    <!--========================================================== -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
 
-                    <!--========================================================== -->
-                                    <!-- FAV ICON -->
-                    <!--========================================================== -->
+    <script src="javascript/planta.js"></script>
+
+    <!--========================================================== -->
+    <!-- FAV ICON -->
+    <!--========================================================== -->
     <link rel="shortcut icon" href="https://img.freepik.com/iconos-gratis/planta_318-449427.jpg?w=2000"
         type="image/x-icon">
+    <!--========================================================== -->
+    <!-- CSS -->
+    <!--========================================================== -->
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
 
-<body>
-                    <!--========================================================== -->
-                                    <!-- ENCABEZADO-->
-                    <!--========================================================== -->
+<body class="bg-dark">
+    <!--========================================================== -->
+    <!-- ENCABEZADO-->
+    <!--========================================================== -->
+
 
     <nav class="navbar navbar-expand-lg bg-navbar-dark bg-dark p-2">
         <div class="container-fluid">
@@ -94,15 +108,29 @@
         </div>
     </nav>
 
-                    <!--========================================================== -->
-                                    <!-- CUERPO -->
-                    <!--========================================================== -->
-
-
-    </section>
-
-
-
+    <!--========================================================== -->
+    <!-- CUERPO -->
+    <!--========================================================== -->
+    
+    <header class="col-xl-3 col-md-12 col-sm-12 col-xs-12" id="RS">
+        <h2 style="color:rgb(255, 255, 255); padding: 20px 10px 20px 10px; border-radius: 10px; font-weight: 700; background-color: rgb(54, 173, 173);">Plantas Disponibles</h2>
+    </header>
+    <div class="container">
+        <div class="row ">
+            <!-- Elementos generados a partir del JSON -->
+            <main id="items" class="col-sm-12 row bg-dark"></main>
+            <!-- Carrito -->
+            <aside class="col-sm-12 row p-4 " id="RS" style="font-weight: 700; background-color: rgb(54, 173, 173);">
+                <h2 style="font-weight: 700;">Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span id="total"></span>&dollar;;</p>
+                <button id="boton-vaciar" class="btn " style="background-color: rgb(35, 116, 116);">Vaciar</button>
+            </aside>
+        </div>
+    </div>
 </body>
 
 </html>
