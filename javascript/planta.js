@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         baseDeDatos.forEach((info) => {
             // Estructura
             const miNodo = document.createElement('div');
-            miNodo.classList.add('card', 'col-sm-3');
+            miNodo.classList.add('card', 'col-md-3','col-sm-8');
             miNodo.style.backgroundColor = 'rgb(54, 173, 173)';
             miNodo.style.borderRadius = '10px';
             miNodo.style.margin = '45px';
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             miNodoTitle.style.color = '#ffff';
             // Imagen
             const miNodoImagen = document.createElement('img');
-            
+            miNodoImagen.classList.add('col-md-12','col-sm-12');
             miNodoImagen.setAttribute('src', info.imagen);
             miNodoImagen.setAttribute('width', info.width)
             miNodoImagen.setAttribute('height', info.height)
@@ -97,20 +97,30 @@ document.addEventListener('DOMContentLoaded', () => {
             
             miNodoPrecio.textContent = `${info.precio}${divisa}`;
             
-            // Boton 
+            // Boton agregar
             const miNodoBoton = document.createElement('button');
             miNodoBoton.classList.add('btn');
             miNodoBoton.textContent = '+';
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
             miNodoBoton.style.background = 'rgb(35, 116, 116)';
+            //Boton restar
+            const miNodoBotonR = document.createElement('button');
+            miNodoBotonR.classList.add('btn', 'm-2');
+            miNodoBotonR.textContent = '-';
+            miNodoBotonR.setAttribute('marcador', info.id);
+            miNodoBotonR.addEventListener('click', restarProductoAlCarrito);
+            miNodoBotonR.style.background = 'rgb(35, 116, 116)';
             // Insertamos
             miNodoCardBody.appendChild(miNodoImagen);
             miNodoCardBody.appendChild(miNodoTitle);
             miNodoCardBody.appendChild(miNodoPrecio);
             miNodoCardBody.appendChild(miNodoBoton);
+            miNodoCardBody.appendChild(miNodoBotonR);
             miNodo.appendChild(miNodoCardBody);
             DOMitems.appendChild(miNodo);
+            
+
         });
     }
 
@@ -120,6 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function anyadirProductoAlCarrito(evento) {
         // Anyadimos el Nodo a nuestro carrito
         carrito.push(evento.target.getAttribute('marcador'))
+        // Actualizamos el carrito 
+        renderizarCarrito();
+
+    }
+
+    function restarProductoAlCarrito(evento) {
+        // Anyadimos el Nodo a nuestro carrito
+        carrito.pop(evento.target.getAttribute('marcador'))
         // Actualizamos el carrito 
         renderizarCarrito();
 
@@ -145,10 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
                 return itemId === item ? total += 1 : total;
             }, 0);
+
             // Creamos el nodo del item del carrito
             const miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
             miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
+            
             // Boton de borrar
             const miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -156,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
             miBoton.style.marginLeft = '1rem';
             miBoton.dataset.item = item;
             miBoton.addEventListener('click', borrarItemCarrito);
+            
             // Mezclamos nodos
             miNodo.appendChild(miBoton);
             DOMcarrito.appendChild(miNodo);
