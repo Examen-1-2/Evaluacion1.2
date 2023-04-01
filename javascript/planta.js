@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Variables
     const baseDeDatos = [
         {
-            id: 1,
+            id: 0,
             nombre: 'Nardo',
             precio: 10000,
             imagen: 'https://cdn0.ecologiaverde.com/es/posts/3/5/9/nardo_cuidados_3953_orig.jpg',
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             height: '230px'
         },
         {
-            id: 2,
+            id: 1,
             nombre: 'Petunia',
             precio: 10000,
             imagen: 'https://www.elmueble.com/medio/2022/05/13/sonja-kalee-from-pixabay-petunia-5395231_1920_f88b6540_1000x644.jpg',
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             height: '230px'
         },
         {
-            id: 3,
+            id: 2,
             nombre: 'Romero',
             precio: 10000,
             imagen: 'https://www.diet-health.info/images/recipes/main_view/1280px-rosemary-7560.jpg',
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             height: '230px'
         },
         {
-            id: 4,
+            id: 3,
             nombre: 'Aloe Vera',
             precio: 10000,
             imagen: 'https://s03.s3c.es/imag/_v0/770x420/b/4/4/aloe-vera-dreamstime.jpg',
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         {
-            id: 5,
+            id: 4,
             nombre: 'Glicinia',
             precio: 10000,
             imagen: 'https://images.hola.com/imagenes/decoracion/20220603211032/como-cultivar-glicinia-plantas-exterior-il/1-96-649/como-cultivar-glicinia-08a-a.jpg',
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             height: '230px'
         },
         {
-            id: 6,
+            id: 5,
             nombre: 'Albahaca',
             precio: 10000,
             imagen: 'https://cdn.portalfruticola.com/2020/04/7e2db098-albahaca-basil-adobestock_81129315-scaled.jpeg',
@@ -104,23 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
             miNodoBoton.style.background = 'rgb(35, 116, 116)';
-            //Boton restar
-            const miNodoBotonR = document.createElement('button');
-            miNodoBotonR.classList.add('btn', 'm-2');
-            miNodoBotonR.textContent = '-';
-            miNodoBotonR.setAttribute('marcador', info.id);
-            miNodoBotonR.addEventListener('click', restarProductoAlCarrito);
-            miNodoBotonR.style.background = 'rgb(35, 116, 116)';
             // Insertamos
             miNodoCardBody.appendChild(miNodoImagen);
             miNodoCardBody.appendChild(miNodoTitle);
             miNodoCardBody.appendChild(miNodoPrecio);
             miNodoCardBody.appendChild(miNodoBoton);
-            miNodoCardBody.appendChild(miNodoBotonR);
             miNodo.appendChild(miNodoCardBody);
             DOMitems.appendChild(miNodo);
-            
-
         });
     }
 
@@ -132,15 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito.push(evento.target.getAttribute('marcador'))
         // Actualizamos el carrito 
         renderizarCarrito();
-
-    }
-
-    function restarProductoAlCarrito(evento) {
-        // Anyadimos el Nodo a nuestro carrito
-        carrito.pop(evento.target.getAttribute('marcador'))
-        // Actualizamos el carrito 
-        renderizarCarrito();
-
     }
 
     /**
