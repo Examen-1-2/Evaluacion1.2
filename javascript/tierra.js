@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 0,
             nombre: 'Tierra Negra',
             precio: 10000,
-            imagen: 'https://www.ecured.cu/images/a/a8/Tierra_negra.jpg',
+            imagen: 'imag/tierranegra.jpg',
             width: '230px',
             height: '230px'
         },
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Tierra Hojas',
             precio: 10000,
-            imagen: 'https://cdn.shopify.com/s/files/1/0563/2167/1350/products/tierra-de-hojas-50-litros-32127566381238_2048x2048.jpg?v=1674225550',
+            imagen: 'imag/tierrahoja.webp',
             width: '230px',
             height: '230px'
         },
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             nombre: 'Organica',
             precio: 10000,
-            imagen: 'https://cdn.portalfruticola.com/2021/02/Tierra-persona-shutterstock_1102083611-1024x683.jpg',
+            imagen: 'imag/tierraorganica.webp',
             width: '230px',
             height: '230px'
         },
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             nombre: 'Profesional',
             precio: 10000,
-            imagen: 'https://blog.homedepot.com.mx/wp-content/uploads/2019/10/tipos_de_tierra_1280x720.jpg',
+            imagen: 'imag/tierrapro.jpg',
             width: '230px',
             height: '230px'
         },
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 4,
             nombre: 'Tierra Maceta',
             precio: 10000,
-            imagen: 'https://www.guiadejardineria.com/wp-content/uploads/2018/02/Cu%C3%A1les-son-los-pros-y-las-contras-de-los-compost-para-macetas.jpg',
+            imagen: 'imag/tierramaceta.jpg',
             width: '230px',
             height: '230px'
         },
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 5,
             nombre: 'Preparada',
             precio: 10000,
-            imagen: 'https://crehana-blog.imgix.net/media/filer_public/f6/c4/f6c4e128-3395-4f02-8b9b-94e58dbba934/tipos-de-tierra-para-plantas-tierra-negra.jpg?auto=format&q=50',
+            imagen: 'imag/tierrapreparada.jpg',
             width: '230px',
             height: '230px'
         }
@@ -70,10 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
         baseDeDatos.forEach((info) => {
             // Estructura
             const miNodo = document.createElement('div');
-            miNodo.classList.add('card', 'col-md-3','col-sm-8');
+            miNodo.classList.add('card', 'col-md-5','col-sm-8','col-xs-12');
             miNodo.style.backgroundColor = 'rgb(54, 173, 173)';
             miNodo.style.borderRadius = '10px';
             miNodo.style.margin = '45px';
+            miNodo.style.backgroundImage = `url(${info.imagen})`;
+            
             
             // Body
             const miNodoCardBody = document.createElement('div');
@@ -82,28 +84,35 @@ document.addEventListener('DOMContentLoaded', () => {
             const miNodoTitle = document.createElement('h5');
             miNodoTitle.classList.add('card-title');
             miNodoTitle.textContent = info.nombre;
-            miNodoTitle.style.color = '#ffff';
+            miNodoTitle.classList.add('col-md-3');
+            miNodoTitle.style.backgroundColor = 'rgba(255,255,255,0.7';
+            miNodoTitle.style.color = 'black';
             // Imagen
             const miNodoImagen = document.createElement('img');
-            miNodoImagen.classList.add('col-md-12','col-sm-12');
+            miNodoImagen.classList.add('col-md-12','col-sm-12','w-100','d-block');
             miNodoImagen.setAttribute('src', info.imagen);
-            miNodoImagen.setAttribute('width', info.width)
             miNodoImagen.setAttribute('height', info.height)
-            miNodoImagen.style.borderRadius = '10px';
+            miNodoImagen.style.borderRadius = '10%';
             miNodoImagen.style.paddingRight = '20px';
+            miNodoImagen.style.opacity = '0.0';
             // Precio
-            const miNodoPrecio = document.createElement('p');
-            miNodoPrecio.classList.add('card-text');
             
+            const miNodoPrecio = document.createElement('p');
+            miNodoPrecio.classList.add('col-md-2');
+            miNodoPrecio.style.backgroundColor = 'rgba(255,255,255,0.7';
+            miNodoPrecio.classList.add('card-text');
             miNodoPrecio.textContent = `${info.precio}${divisa}`;
             
             // Boton agregar
             const miNodoBoton = document.createElement('button');
             miNodoBoton.classList.add('btn');
+            
             miNodoBoton.textContent = '+';
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-            miNodoBoton.style.background = 'rgb(35, 116, 116)';
+            miNodoBoton.style.backgroundColor = 'rgba(255,255,255,0.7';
+            miNodoBoton.style.color = 'black';
+
             // Insertamos
             miNodoCardBody.appendChild(miNodoImagen);
             miNodoCardBody.appendChild(miNodoTitle);
@@ -148,9 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Creamos el nodo del item del carrito
             const miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+            miNodo.style.backgroundColor = 'rgba(54, 173, 173,0.2)';
+            miNodo.style.color = 'white';
             miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
             
             // Boton de borrar
+
             const miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
             miBoton.textContent = 'X';

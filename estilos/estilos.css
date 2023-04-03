@@ -1,19 +1,54 @@
-#RS{
+.body-bg {
+    background: linear-gradient(-150deg, rgb(79, 181, 84), rgb(35, 39, 35));
+
+}
+
+nav {
+    background: linear-gradient(-150deg, rgb(79, 181, 84), rgb(35, 39, 35));
+
+}
+
+#RS {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.bor1{
-    border-radius: 10px; 
+.bor2 {
+    border-radius: 10px;
     box-shadow: 10px 10px 10px #3882f188;
 }
 
-.bor2{
-    border-radius: 10px; 
+.bor3 {
+    border-radius: 10px;
     box-shadow: 10px 10px 10px #6dc15a69;
 }
 
-.bor3{
+.bor1 {
     border-radius: 10px;
     box-shadow: 10px 10px 10px #e2e26688;
+}
+
+.carousel-img-px {
+    width: 600px;
+    height: 500px;
+
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+    /* Ancho del scrollbar*/
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(110, 103, 103);
+    /* Color de la barra */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(136, 121, 121);
+    /* color del scrollbarr */
+    border-radius: 30px;
+    /* le damos las puntas redondas*/
+    border: 3px solid rgb(75, 64, 64);
+    /* le damos el fondo del scrollbar */
 }
 

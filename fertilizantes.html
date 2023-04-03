@@ -36,7 +36,7 @@
 
 </head>
 
-<body class="bg-dark">
+<body class="body-bg">
                         <!--========================================================== -->
                                         <!-- ENCABEZADO-->
                         <!--========================================================== -->
@@ -105,21 +105,21 @@
     </nav>
 
         <header class="col-xl-3 col-md-12 col-sm-12 col-xs-12" id="RS">
-            <h2 style="color:rgb(255, 255, 255); padding: 20px 10px 20px 10px; border-radius: 10px; font-weight: 700; background-color: rgb(54, 173, 173);">Fertilizantes Disponibles</h2>
+            <img src="imag/producto1.png" style="padding-left: 30px;">
         </header>
         <div class="container">
             <div class="row ">
                 <!-- Elementos generados a partir del JSON -->
-                <main id="items" class="col-sm-12 row bg-dark"></main>
+                <main id="items" class="col-sm-12 row body-bg" style="background: linear-gradient(-150deg, rgba(79, 181, 84, 0.1), rgba(35, 39, 35,0.1));"></main>
                 <!-- Carrito -->
-                <aside class="col-sm-12 row p-4 " id="RS" style="font-weight: 700; background-color: rgb(54, 173, 173);">
-                    <h2 style="font-weight: 700;">Carrito</h2>
+                <aside class="col-sm-12 row p-4 " id="RS" style="font-weight: 700; background-color: rgba(54, 173, 173,0.2);">
+                    <h2 style="font-weight: 700; color: white;">Carrito</h2>
                     <!-- Elementos del carrito -->
                     <ul id="carrito" class="list-group"></ul>
                     <hr>
                     <!-- Precio total -->
-                    <p class="text-right">Total: <span id="total"></span>&dollar;;</p>
-                    <button id="boton-vaciar" class="btn " style="background-color: rgb(35, 116, 116);">Vaciar</button>
+                    <p class="text-right" style="color:white">Total: <span id="total"></span>&dollar;;</p>
+                    <button id="boton-vaciar" class="btn " style="background-color: rgba(35, 116, 116,0.2); color: white;">Vaciar</button>
                     
                 </aside>
             </div>

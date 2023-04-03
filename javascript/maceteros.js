@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 0,
             nombre: 'Colgante',
             precio: 10000,
-            imagen: 'https://cdnx.jumpseller.com/tomomi/image/12284792/Captura_de_Pantalla_2020-06-16_a_la_s__17.02.57.jpg?1654212831',
+            imagen: 'imag/maceterocolgante.jpg',
             width: '230px',
             height: '230px'
         },
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Madera',
             precio: 10000,
-            imagen: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/outsunny-huerto-urbano-jardinera-macetero-de-madera-amazon-1659957924.jpg?crop=0.838xw:0.838xh;0,0.162xh&resize=1200:*',
+            imagen: 'imag/maceteromadera.jpg',
             width: '230px',
             height: '230px'
         },
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             nombre: 'Cemento',
             precio: 10000,
-            imagen: 'https://mundopaisaje.cl/wp-content/uploads/2021/06/freddie-marriage-UcfKYTan-LU-unsplash-1-scaled.jpg',
+            imagen: 'imag/maceterocemento.jpg',
             width: '230px',
             height: '230px'
         },
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             nombre: 'Plastico',
             precio: 10000,
-            imagen: 'https://www.jardineriaon.com/wp-content/uploads/2019/04/haworthia-en-maceta-de-plastico-830x553.jpg',
+            imagen: 'imag/maceta.jpg',
             width: '230px',
             height: '230px'
         },
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 4,
             nombre: 'Resina',
             precio: 10000,
-            imagen: 'https://www.conchidecoracion.com/galeria/categorias/de-resina_496_1.jpg',
+            imagen: 'imag/maceteroresina.jpg',
             width: '230px',
             height: '230px'
         },
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 5,
             nombre: 'Vidrio',
             precio: 10000,
-            imagen: 'https://www.elblogdelatabla.com/wp-content/uploads/2020/12/maceta-terrario-cristal-soplado-boca2B42B1000px.jpg',
+            imagen: 'imag/maceterovidrio.jpg',
             width: '230px',
             height: '230px'
         }
@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 
     // Funciones
+
     /**
     * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
     */
@@ -69,10 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
         baseDeDatos.forEach((info) => {
             // Estructura
             const miNodo = document.createElement('div');
-            miNodo.classList.add('card', 'col-md-3','col-sm-8');
+            miNodo.classList.add('card', 'col-md-5','col-sm-8','col-xs-12');
             miNodo.style.backgroundColor = 'rgb(54, 173, 173)';
             miNodo.style.borderRadius = '10px';
             miNodo.style.margin = '45px';
+            miNodo.style.backgroundImage = `url(${info.imagen})`;
+            
             
             // Body
             const miNodoCardBody = document.createElement('div');
@@ -81,28 +84,35 @@ document.addEventListener('DOMContentLoaded', () => {
             const miNodoTitle = document.createElement('h5');
             miNodoTitle.classList.add('card-title');
             miNodoTitle.textContent = info.nombre;
-            miNodoTitle.style.color = '#ffff';
+            miNodoTitle.classList.add('col-md-3');
+            miNodoTitle.style.backgroundColor = 'rgba(255,255,255,0.7';
+            miNodoTitle.style.color = 'black';
             // Imagen
             const miNodoImagen = document.createElement('img');
-            miNodoImagen.classList.add('col-md-12','col-sm-12');
+            miNodoImagen.classList.add('col-md-12','col-sm-12','w-100','d-block');
             miNodoImagen.setAttribute('src', info.imagen);
-            miNodoImagen.setAttribute('width', info.width)
             miNodoImagen.setAttribute('height', info.height)
-            miNodoImagen.style.borderRadius = '10px';
+            miNodoImagen.style.borderRadius = '10%';
             miNodoImagen.style.paddingRight = '20px';
+            miNodoImagen.style.opacity = '0.0';
             // Precio
-            const miNodoPrecio = document.createElement('p');
-            miNodoPrecio.classList.add('card-text');
             
+            const miNodoPrecio = document.createElement('p');
+            miNodoPrecio.classList.add('col-md-2');
+            miNodoPrecio.style.backgroundColor = 'rgba(255,255,255,0.7';
+            miNodoPrecio.classList.add('card-text');
             miNodoPrecio.textContent = `${info.precio}${divisa}`;
             
             // Boton agregar
             const miNodoBoton = document.createElement('button');
             miNodoBoton.classList.add('btn');
+            
             miNodoBoton.textContent = '+';
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-            miNodoBoton.style.background = 'rgb(35, 116, 116)';
+            miNodoBoton.style.backgroundColor = 'rgba(255,255,255,0.7';
+            miNodoBoton.style.color = 'black';
+
             // Insertamos
             miNodoCardBody.appendChild(miNodoImagen);
             miNodoCardBody.appendChild(miNodoTitle);
@@ -147,9 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Creamos el nodo del item del carrito
             const miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+            miNodo.style.backgroundColor = 'rgba(54, 173, 173,0.2)';
+            miNodo.style.color = 'white';
             miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
             
             // Boton de borrar
+
             const miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
             miBoton.textContent = 'X';

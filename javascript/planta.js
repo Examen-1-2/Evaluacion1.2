@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 0,
             nombre: 'Nardo',
             precio: 10000,
-            imagen: 'https://cdn0.ecologiaverde.com/es/posts/3/5/9/nardo_cuidados_3953_orig.jpg',
+            imagen: 'imag/nardo.jpeg',
             width: '230px',
             height: '230px'
         },
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Petunia',
             precio: 10000,
-            imagen: 'https://www.elmueble.com/medio/2022/05/13/sonja-kalee-from-pixabay-petunia-5395231_1920_f88b6540_1000x644.jpg',
+            imagen: 'imag/petunias.jpg',
             width: '230px',
             height: '230px'
         },
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             nombre: 'Romero',
             precio: 10000,
-            imagen: 'https://www.diet-health.info/images/recipes/main_view/1280px-rosemary-7560.jpg',
+            imagen: 'imag/romero.jpg',
             width: '230px',
             height: '230px'
         },
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             nombre: 'Aloe Vera',
             precio: 10000,
-            imagen: 'https://s03.s3c.es/imag/_v0/770x420/b/4/4/aloe-vera-dreamstime.jpg',
+            imagen: 'imag/aloevera.jpg',
             width: '230px',
             height: '230px'
         },
@@ -47,13 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 5,
             nombre: 'Albahaca',
             precio: 10000,
-            imagen: 'https://cdn.portalfruticola.com/2020/04/7e2db098-albahaca-basil-adobestock_81129315-scaled.jpeg',
+            imagen: 'imag/albahaca.webp',
             width: '230px',
             height: '230px'
         }
 
     ];
-
     let carrito = [];
     const divisa = '$';
     const DOMitems = document.querySelector('#items');
@@ -70,10 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
         baseDeDatos.forEach((info) => {
             // Estructura
             const miNodo = document.createElement('div');
-            miNodo.classList.add('card', 'col-md-3','col-sm-8');
+            miNodo.classList.add('card', 'col-md-5','col-sm-8','col-xs-12');
             miNodo.style.backgroundColor = 'rgb(54, 173, 173)';
             miNodo.style.borderRadius = '10px';
             miNodo.style.margin = '45px';
+            miNodo.style.backgroundImage = `url(${info.imagen})`;
+            
             
             // Body
             const miNodoCardBody = document.createElement('div');
@@ -82,28 +83,35 @@ document.addEventListener('DOMContentLoaded', () => {
             const miNodoTitle = document.createElement('h5');
             miNodoTitle.classList.add('card-title');
             miNodoTitle.textContent = info.nombre;
-            miNodoTitle.style.color = '#ffff';
+            miNodoTitle.classList.add('col-md-3');
+            miNodoTitle.style.backgroundColor = 'rgba(255,255,255,0.7';
+            miNodoTitle.style.color = 'black';
             // Imagen
             const miNodoImagen = document.createElement('img');
-            miNodoImagen.classList.add('col-md-12','col-sm-12');
+            miNodoImagen.classList.add('col-md-12','col-sm-12','w-100','d-block');
             miNodoImagen.setAttribute('src', info.imagen);
-            miNodoImagen.setAttribute('width', info.width)
             miNodoImagen.setAttribute('height', info.height)
-            miNodoImagen.style.borderRadius = '10px';
+            miNodoImagen.style.borderRadius = '10%';
             miNodoImagen.style.paddingRight = '20px';
+            miNodoImagen.style.opacity = '0.0';
             // Precio
-            const miNodoPrecio = document.createElement('p');
-            miNodoPrecio.classList.add('card-text');
             
+            const miNodoPrecio = document.createElement('p');
+            miNodoPrecio.classList.add('col-md-2');
+            miNodoPrecio.style.backgroundColor = 'rgba(255,255,255,0.7';
+            miNodoPrecio.classList.add('card-text');
             miNodoPrecio.textContent = `${info.precio}${divisa}`;
             
             // Boton agregar
             const miNodoBoton = document.createElement('button');
             miNodoBoton.classList.add('btn');
+            
             miNodoBoton.textContent = '+';
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-            miNodoBoton.style.background = 'rgb(35, 116, 116)';
+            miNodoBoton.style.backgroundColor = 'rgba(255,255,255,0.7';
+            miNodoBoton.style.color = 'black';
+
             // Insertamos
             miNodoCardBody.appendChild(miNodoImagen);
             miNodoCardBody.appendChild(miNodoTitle);
@@ -148,9 +156,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Creamos el nodo del item del carrito
             const miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+            miNodo.style.backgroundColor = 'rgba(54, 173, 173,0.2)';
+            miNodo.style.color = 'white';
             miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
             
             // Boton de borrar
+
             const miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
             miBoton.textContent = 'X';
