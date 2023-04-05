@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 0,
             nombre: 'Tierra Negra',
             precio: 10000,
-            imagen: 'imag/tierranegra.jpg',
+            imagen: 'imag/productos/tierras/tierranegra.jpg',
             width: '230px',
             height: '230px'
         },
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Tierra Hojas',
             precio: 10000,
-            imagen: 'imag/tierrahoja.webp',
+            imagen: 'imag/productos/tierras/tierrahoja.webp',
             width: '230px',
             height: '230px'
         },
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             nombre: 'Organica',
             precio: 10000,
-            imagen: 'imag/tierraorganica.webp',
+            imagen: 'imag/productos/tierras/tierraorganica.webp',
             width: '230px',
             height: '230px'
         },
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             nombre: 'Profesional',
             precio: 10000,
-            imagen: 'imag/tierrapro.jpg',
+            imagen: 'imag/productos/tierras/tierrapro.jpg',
             width: '230px',
             height: '230px'
         },
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 4,
             nombre: 'Tierra Maceta',
             precio: 10000,
-            imagen: 'imag/tierramaceta.jpg',
+            imagen: 'imag/productos/tierras/tierramaceta.jpg',
             width: '230px',
             height: '230px'
         },
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 5,
             nombre: 'Preparada',
             precio: 10000,
-            imagen: 'imag/tierrapreparada.jpg',
+            imagen: 'imag/productos/tierras/tierrapreparada.jpg',
             width: '230px',
             height: '230px'
         }

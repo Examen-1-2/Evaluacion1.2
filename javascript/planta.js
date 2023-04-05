@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 0,
             nombre: 'Nardo',
             precio: 10000,
-            imagen: 'imag/nardo.jpeg',
+            imagen: 'imag/productos/plantas/nardo.jpeg',
             width: '230px',
             height: '230px'
         },
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Petunia',
             precio: 10000,
-            imagen: 'imag/petunias.jpg',
+            imagen: 'imag/productos/plantas/petunias.jpg',
             width: '230px',
             height: '230px'
         },
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             nombre: 'Romero',
             precio: 10000,
-            imagen: 'imag/romero.jpg',
+            imagen: 'imag/productos/plantas/romero.jpg',
             width: '230px',
             height: '230px'
         },
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             nombre: 'Aloe Vera',
             precio: 10000,
-            imagen: 'imag/aloevera.jpg',
+            imagen: 'imag/productos/plantas/aloevera.jpg',
             width: '230px',
             height: '230px'
         },
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 5,
             nombre: 'Albahaca',
             precio: 10000,
-            imagen: 'imag/albahaca.webp',
+            imagen: 'imag/productos/plantas/albahaca.webp',
             width: '230px',
             height: '230px'
         }

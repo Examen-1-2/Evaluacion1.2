@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 0,
             nombre: 'Colgante',
             precio: 10000,
-            imagen: 'imag/maceterocolgante.jpg',
+            imagen: 'imag/productos/maceteros/maceterocolgante.jpg',
             width: '230px',
             height: '230px'
         },
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Madera',
             precio: 10000,
-            imagen: 'imag/maceteromadera.jpg',
+            imagen: 'imag/productos/maceteros/maceteromadera.jpg',
             width: '230px',
             height: '230px'
         },
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             nombre: 'Cemento',
             precio: 10000,
-            imagen: 'imag/maceterocemento.jpg',
+            imagen: 'imag/productos/maceteros/maceterocemento.jpg',
             width: '230px',
             height: '230px'
         },
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             nombre: 'Plastico',
             precio: 10000,
-            imagen: 'imag/maceta.jpg',
+            imagen: 'imag/productos/maceteros/maceta.jpg',
             width: '230px',
             height: '230px'
         },
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 4,
             nombre: 'Resina',
             precio: 10000,
-            imagen: 'imag/maceteroresina.jpg',
+            imagen: 'imag/productos/maceteros/maceteroresina.jpg',
             width: '230px',
             height: '230px'
         },
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 5,
             nombre: 'Vidrio',
             precio: 10000,
-            imagen: 'imag/maceterovidrio.jpg',
+            imagen: 'imag/productos/maceteros/maceterovidrio.jpg',
             width: '230px',
             height: '230px'
         }

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 0,
             nombre: 'Quimico',
             precio: 10000,
-            imagen: 'imag/quimico.png',
+            imagen: 'imag/productos/fertilizantes/quimico.png',
             width: '230px',
             height: '230px'
         },
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Organico',
             precio: 10000,
-            imagen: 'imag/organico.png',
+            imagen: 'imag/productos/fertilizantes/organico.png',
             width: '230px',
             height: '230px'
         },
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             nombre: 'Inorganico',
             precio: 10000,
-            imagen: 'imag/artificial.webp',
+            imagen: 'imag/productos/fertilizantes/artificial.webp',
             width: '230px',
             height: '230px'
         },
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             nombre: 'Potasico',
             precio: 10000,
-            imagen: 'imag/Potasicos.jpeg',
+            imagen: 'imag/productos/fertilizantes/Potasicos.jpeg',
             width: '230px',
             height: '230px'
         }
