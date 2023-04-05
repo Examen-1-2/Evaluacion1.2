@@ -52,3 +52,19 @@ body::-webkit-scrollbar-thumb {
     /* le damos el fondo del scrollbar */
 }
 
+
+.Buscar {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px rgb(0, 0, 0);
+}
+
+.btn {
+    width: 70px;
+    height: 40px;
+    background: rgb(93, 89, 89);
+    border-radius: 10px;
+    border: solid 2px rgb(73, 72, 72);
+}
+

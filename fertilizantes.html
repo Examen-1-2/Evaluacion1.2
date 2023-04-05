@@ -94,12 +94,25 @@
                         <a class="nav-link" href="nosotros.html" style="color: #929292">Nosotros</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar.." aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">
-                        Buscar
-                    </button>
+                <form>
+                    <input type="text" id="pagina" class="Buscar pb-1" placeholder="Buscar.." aria-label="Search">
+                    <input class= "btn" type="button" onclick="buscar()" value="Buscar" >
                 </form>
+
+                <script>
+                    function buscar(e) {
+                        var paginas=Array("index","plantas","maceteros","tierra","nosotros","fertilizantes");
+                        var pagina=document.getElementById("pagina").value;
+                        for(var i=0;i<paginas.length;i++) {
+                            if(pagina==paginas[i]) {
+                                window.location.href=pagina+".html";
+                                return;
+                            }
+                            
+                        }
+                        window.location.href="error.html";
+                    }
+                    </script>
             </div>
         </div>
     </nav>
