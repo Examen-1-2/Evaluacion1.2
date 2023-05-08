@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Sign Up | Chile Limpio</div>
+        <div class="content">
+            <form action="" method="post" id="formu">
+
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Rut</span>
+                        <input type="number" placeholder="Ingresa tu rut..." id="rut" name="rut">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Apellido Paterno</span>
+                        <input type="text" placeholder="Ingresar apellido..." id="apep" name="apep">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Apellido Materno</span>
+                        <input type="text" placeholder="Ingresar apellido..." id="apem" name="apem">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nombre</span>
+                        <input type="text" placeholder="Ingresa nombre..." id="nombre" name="nombre">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Fecha De Nacimiento</span>
+                        <input type="date" id="fechanac" name="fechanac">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Edad</span>
+                        <input type="number" placeholder="Ingrese su edad..." id="edad" name="edad">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Correo electronico</span>
+                        <input type="email" placeholder="Ingresar Correo..." id="email" name="email">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Numero Telefonico</span>
+                        <input type="number" placeholder="Ingresar telefono..." id="cel" name="cel">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Profesion/Ocupacion</span>
+                        <input type="text" placeholder="Ingresar profesion..." id="prof" name="prof">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Motivacion/Meta</span>
+                        <textarea cols="44" rows="5" id="moti" name="moti"></textarea>
+                    </div>
+                    <div class="gender-details">
+                    <span class="details">Ingrese su Genero</span>
+                    <select id="gene" name="gene">
+                        <option value="0">Seleccionar...</option>
+                        <option value="1">Hombre</option>
+                        <option value="2">Mujer</option>
+                        <option value="3">Otro</option>
+                    </select>
+
+                    </div>
+                </div>
+                
+                <p class="warnings" id="warnings"></p>
+                
+                <div class="button">
+                    <input type="submit" value="Enviar">
+    
+                </div>
+
+                    <button class="button" type="button" id="boton" style="margin: 5px; " onClick="copiarDatos()">Generar Carta</button>
+                    <textarea id="textToEncode" style="width: 100%; height: 200px;"></textarea>
+                </div>
+
+            </form>
+            <button id="boton" class="button" style="padding: 10px;">Crear Carta</button>
+                <div style="margin: 5px;"><br><p id="carta" ></p></div>
+            
+        </div>
+    </div>
+                            <!--JQUERY LIBRARY-->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="Js/ValidacionJQ.js"></script>
+
+    <script src="Js/GeneraCartaJQ.js"></script>
+
+    <script src="Js/GeneraCarta.js"></script>
+
+</body>
+</html>
