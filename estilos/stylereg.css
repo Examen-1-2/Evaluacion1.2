@@ -197,3 +197,10 @@ input.error, textarea.error {
     transition: all 0.3s ease;
     background: linear-gradient(-150deg, rgb(79, 181, 84), rgb(35, 39, 35));
 }
+.inside {
+    background: linear-gradient(-150deg, rgb(240, 240, 240), rgb(240, 240, 240));
+}
+
+.aside{
+    background: linear-gradient(-150deg, rgb(171, 171, 171), rgb(171, 171, 171));
+}
